@@ -5,6 +5,7 @@ const App = () => {
   
     const [tasks, setTasks] = useState([]);
     const [newTask,setNewTask] = useState('')
+    const [taskDone,setTaskDone] = useState(false)
    
   
     
@@ -16,6 +17,10 @@ const App = () => {
     
     }
  
+  const handleDoneTask = (event) => {
+    setTaskDone(event.target.checked)
+  }
+
   return(
   <main className="main-todo">
     <section className="section-todo">
@@ -29,10 +34,10 @@ const App = () => {
 
       {tasks.map(task => {
        return(
-       <>
-        <input type='checkbox'/>
-        <div key={task}>{task}</div>
-       </>
+       <div key={task}>
+        <input type='checkbox'  onChange={handleDoneTask}/>
+        <p>{task}</p>
+       </div>
       )}
       )}
       </div>
