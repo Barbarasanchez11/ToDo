@@ -1,1 +1,138 @@
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*my styles*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; 
+}
+
+/*mobile-small screens*/
+.main-todo {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(171, 171, 171);
+}
+.section-todo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background-addtask-todo{
+  padding: 10px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.addtask-container-todo{
+
+  background-color: rgb(204, 204, 215);
+  padding: 8px;
+  border-radius: 4px;
+}
+.input-task-todo{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color:rgb(25, 221, 239) ;
+}
+
+.button-addtask-todo{
+  cursor: pointer;
+  padding: 4px;
+  background-color: pink;
+  color: white;
+  border: none;
+}
+
+.container-add-todo{
+  padding: 10px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.task-container-todo{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(204, 204, 215);
+  padding: 4px;
+  gap: 8px;
+}
+
+.task-container-todo input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #00bcd4; 
+  border-color: 2px solid #00bcd4; 
+  cursor: pointer;
+}
+.task-container-todo p{
+  color:rgb(55, 180, 191);
+  font-size: 16px;
+}
+
+.container-list-todo{
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  margin-top: 6px;
+}
+
+.button-delete-todo{
+  border: none;
+  background-color: rgb(25, 221, 239);
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}

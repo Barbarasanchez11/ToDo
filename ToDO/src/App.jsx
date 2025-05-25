@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState} from 'react';
+import './App.css'
 
 const App = () => {
   
@@ -30,25 +31,25 @@ const App = () => {
   return(
   <main className="main-todo">
     <section className="section-todo">
-      <div>
-       <div>
+      <div className='background-addtask-todo'>
+       <div className='addtask-container-todo'>
         <input type="text" value={newTask} onChange={(e) => setNewTask(e.target.value)} className="input-task-todo"/>
-        <button type="button" onClick={handleAddTask}>Añadir</button>
+        <button type="button" onClick={handleAddTask} className='button-addtask-todo'>Añadir</button>
        </div>
       </div>
       <div className="container-add-todo">
 
       {tasks.map(task => {
        return(
-       <div key={task}>
+       <div key={task} className='task-container-todo'>
         <input type='checkbox'  onClick={(e) => {handleDeleteDone(e.target.id)}} id={task}/>
         <p>{task}</p>
        </div>
       )}
       )}
+      <div className="container-list-todo">
+      <button type="button" onClick={deleteTasks} className='button-delete-todo' >Eliminar completados</button>
       </div>
-      <div className="conatiner-list-todo">
-      <button type="button" onClick={deleteTasks} >Eliminar completados</button>
       </div>
     </section>
   </main>
