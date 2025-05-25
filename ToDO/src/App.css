@@ -93,6 +93,7 @@ html, body {
   background-color: pink;
   color: white;
   border: none;
+  font-size: 14px;
 }
 
 .container-add-todo{
@@ -135,4 +136,50 @@ html, body {
   border-radius: 4px;
   cursor: pointer;
   color: white;
+  font-size: 14px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .section-todo {
+    max-width: 600px;
+  }
+
+  .input-task-todo {
+    font-size: 18px;
+  }
+
+  .task-container-todo p {
+    font-size: 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .main-todo {
+    
+    padding: 40px;
+  }
+
+  .section-todo {
+    
+    gap: 40px;
+    max-width: 900px;
+  }
+   
+  .container-add-todo{
+    padding: 10px;
+    background-color: white;
+  }
+ 
+
+  .task-container-todo p {
+    font-size: 20px;
+  }
+
+  .button-addtask-todo,
+  .button-delete-todo {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
 }
