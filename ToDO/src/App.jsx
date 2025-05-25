@@ -40,10 +40,13 @@ const App = () => {
       <div className="container-add-todo">
 
       {tasks.map(task => {
+        const isDone= taskDone.includes(task)
        return(
        <div key={task} className='task-container-todo'>
-        <input type='checkbox'  onClick={(e) => {handleDeleteDone(e.target.id)}} id={task}/>
-        <p>{task}</p>
+        <input type='checkbox' className="checkbox-todo" onClick={(e) => {handleDeleteDone(e.target.id)}} 
+        id={task} 
+        checked={isDone}/>
+        <p className={isDone ? 'task-done' : ''}>{task}</p>
        </div>
       )}
       )}
