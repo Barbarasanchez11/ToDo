@@ -43,10 +43,12 @@ const App = () => {
         const isDone= taskDone.includes(task)
        return(
        <div key={task} className='task-container-todo'>
-        <input type='checkbox' className="checkbox-todo" onClick={(e) => {handleDeleteDone(e.target.id)}} 
-        id={task} 
-        checked={isDone}/>
-        <p className={isDone ? 'task-done' : ''}>{task}</p>
+        <label className="custom-checkbox">
+         <input type="checkbox" onClick={(e) => handleDeleteDone(e.target.id)} id={task} checked={isDone} />
+         <span></span>
+        </label>
+
+        <p id={isDone ? 'task-done' : ''} className={isDone ? 'task-done' : ''}>{task}</p>
        </div>
       )}
       )}
