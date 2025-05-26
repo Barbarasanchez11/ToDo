@@ -1,12 +1,46 @@
-# React + Vite
+# ToDo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web sencilla para gestionar tareas pendientes. Permite añadir, visualizar, marcar como completadas y eliminar tareas de forma intuitiva.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Añadir nuevas tareas
+- Marcar tareas como completadas
+- Eliminar tareas individuales o todas a la vez
+- Persistencia de datos mediante almacenamiento local del navegador (localStorage)
+- Interfaz amigable y adaptable a distintos tamaños de pantalla
 
-## Expanding the ESLint configuration
+## Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- HTML5
+- CSS3
+- JavaScript (ES6)
+
+## Estructura del proyecto
+
+ToDo/
+├── index.html
+├── style.css
+└── script.js
+
+
+## Instalación y uso
+
+1. Clona este repositorio:
+
+   git clone https://github.com/Barbarasanchez11/ToDo.git
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas colaborar en este proyecto, sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama: `git checkout -b nombre-de-tu-rama`
+3. Realiza tus cambios y haz commit: `git commit -m "Descripción de tus cambios"`
+4. Envía los cambios a tu repositorio remoto: `git push origin nombre-de-tu-rama`
+5. Abre un Pull Request describiendo detalladamente tus cambios.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más información.
+
