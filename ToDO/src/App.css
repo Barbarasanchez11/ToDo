@@ -97,6 +97,11 @@ html, body {
   font-size: 14px;
 }
 
+.button-addtask-todo:hover{
+  background-color: rgb(195, 127, 138);
+  transition: 0.2 ease ;
+}
+
 .container-add-todo{
   padding: 10px;
   background-color: white;
@@ -168,18 +173,13 @@ html, body {
 }
 
 .task-done {
- 
   text-decoration: line-through;
   text-decoration-thickness: 4px;
-  text-decoration-color: #1ed6e7;
-  
-  
+  text-decoration-color: #1ed6e7; 
 }
 #task-done {
   color: grey;
 }
-
-
 
 .container-list-todo{
   display: flex;
@@ -196,6 +196,12 @@ html, body {
   cursor: pointer;
   color: white;
   font-size: 14px;
+  
+}
+
+.button-delete-todo:hover{
+  transform: scale(1.1);
+  transition: ease .3s;
 }
 
 /* Tablet */
