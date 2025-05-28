@@ -31,7 +31,7 @@
   font-size: 14px;
 }
 
-.button-addtask-todo {
+.btn-primary {
   cursor: pointer;
   padding: 4px;
   background-color: pink;
@@ -41,7 +41,7 @@
   font-size: 14px;
 }
 
-.button-addtask-todo:hover {
+.btn-primary:hover {
   background-color: rgb(195, 127, 138);
   transition: 0.2 ease;
 }
@@ -125,7 +125,7 @@
   margin-top: 6px;
 }
 
-.button-delete-todo {
+.btn-delete{
   border: none;
   background-color: rgb(25, 221, 239);
   padding: 6px;
@@ -135,7 +135,7 @@
   font-size: 14px;
 }
 
-.button-delete-todo:hover {
+.btn-delete:hover {
   transform: scale(1.1);
   transition: ease 0.3s;
 }
@@ -174,8 +174,8 @@
     font-size: 20px;
   }
 
-  .button-addtask-todo,
-  .button-delete-todo {
+  .btn-primary,
+  .btn-delete{
     font-size: 16px;
     padding: 8px 12px;
   }

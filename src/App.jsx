@@ -42,9 +42,7 @@ const App = () => {
               onChange={(event) => setNewTask(event.target.value)}
               className="input-task-todo"
             />
-            <Button onClick={handleAddTask} className="button-addtask-todo">
-              Añadir
-            </Button>
+            <Button type="primary" onClick={handleAddTask}>Añadir</Button>
           </div>
         </div>
         <div className="container-add-todo">
@@ -69,9 +67,7 @@ const App = () => {
             );
           })}
           <div className="container-list-todo">
-            <Button onClick={deleteTasks} className="button-delete-todo">
-              Eliminar completados
-            </Button>
+          <Button type="delete" onClick={deleteTasks}>Eliminar completados</Button>
           </div>
         </div>
       </section>
