@@ -23,7 +23,6 @@ ToDo/
 ├── style.css
 └── script.js
 
-
 ## Instalación y uso
 
 1. Clona este repositorio:
@@ -42,4 +41,4 @@ Las contribuciones son bienvenidas. Si deseas colaborar en este proyecto, sigue 
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT. 
+Este proyecto está licenciado bajo la Licencia MIT.
