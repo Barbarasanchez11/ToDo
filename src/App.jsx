@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState} from 'react';
-import Inputs from './components/Inputs';
-import Button from './components/Buttons';
+import Inputs from './components/Input';
+import Button from './components/Button';
 import './styles/reset.css'
 import './styles/App.css'
 
