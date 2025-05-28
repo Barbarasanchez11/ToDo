@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState} from 'react';
-import Inputs from './components/Input';
-import Button from './components/Button';
+import InputText from './components/Input/InputText';
+import InputCheckbox from './components/Input/InputCheckbox';
+import Button from './components/Button/Button';
 import './styles/reset.css'
 import './styles/App.css'
 
@@ -35,7 +36,7 @@ const App = () => {
     <section className="section-todo">
       <div className='background-addtask-todo'>
        <div className='addtask-container-todo'>
-        <Inputs  value={newTask} onChange={(event) => setNewTask(event.target.value)} className="input-task-todo" />
+        <InputText  value={newTask} onChange={(event) => setNewTask(event.target.value)} className="input-task-todo" />
         <Button onClick={handleAddTask} className="button-addtask-todo">
               Añadir
         </Button>
@@ -48,7 +49,7 @@ const App = () => {
        return(
        <div key={task} className='task-container-todo'>
         <label className="custom-checkbox">
-         <Inputs type="checkbox" onClick={(event) => handleDeleteDone(event.target.id)} id={task} checked={isDone} />
+         <InputCheckbox type="checkbox" onClick={(event) => handleDeleteDone(event.target.id)} id={task} checked={isDone} />
          <span></span>
         </label>
 

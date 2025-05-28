@@ -1,7 +1,7 @@
 const Inputs = ({type, value, onChange, className='',onClick, id,checked}) => {
    return(
     <input
-        type={type}
+        type='text'
         value={value}
         onChange={onChange}
         onClick={onClick}
