@@ -12,22 +12,26 @@ const App = () => {
   const [taskDone, setTaskDone] = useState([]);
 
   const handleAddTask = () => {
-    const existTask = tasks.indexOf(newTask);
-    if (existTask === -1) {
-      setTasks([...tasks, newTask]);
+    if (!newTask.trim()) return;
+
+    const existTaskIndex = tasks.findIndex(task => task.text === newTask.trim());
+    if (existTaskIndex === -1) {
+      setTasks([...tasks, { id: Date.now(), text: newTask.trim() }]);
     }
     setNewTask('');
   };
 
-  const handleDeleteDone = (task) => {
-    const isDoneTask = taskDone.indexOf(task);
-    isDoneTask === -1
-      ? setTaskDone([...taskDone, task])
-      : setTaskDone(taskDone.filter((task) => task !== task));
+  const handleDeleteDone = (taskId) => {
+    const isDoneTask = taskDone.indexOf(taskId);
+    if (isDoneTask === -1) {
+      setTaskDone([...taskDone, taskId]);
+    } else {
+      setTaskDone(taskDone.filter(id => id !== taskId));
+    }
   };
 
   const deleteTasks = () => {
-    const taskFiltered = tasks.filter((task) => !taskDone.includes(task));
+    const taskFiltered = tasks.filter(task => !taskDone.includes(task.id));
     setTasks(taskFiltered);
     setTaskDone([]);
   };
@@ -47,27 +51,27 @@ const App = () => {
         </div>
         <div className="container-add-todo">
           {tasks.map((task) => {
-            const isDone = taskDone.includes(task);
+            const isDone = taskDone.includes(task.id);
             return (
-              <div key={task} className="task-container-todo">
+              <div key={task.id} className="task-container-todo">
                 <label className="custom-checkbox">
                   <InputCheckbox
                     type="checkbox"
-                    onClick={(event) => handleDeleteDone(event.target.id)}
-                    id={task}
+                    onClick={() => handleDeleteDone(task.id)}
+                    id={task.id.toString()}
                     checked={isDone}
                   />
                   <span></span>
                 </label>
 
                 <p id={isDone ? 'task-done' : ''} className={isDone ? 'task-done' : ''}>
-                  {task}
+                  {task.text}
                 </p>
               </div>
             );
           })}
           <div className="container-list-todo">
-          <Button type="delete" onClick={deleteTasks}>Eliminar completados</Button>
+            <Button type="delete" onClick={deleteTasks}>Eliminar completados</Button>
           </div>
         </div>
       </section>
@@ -76,3 +80,4 @@ const App = () => {
 };
 
 export default App;
+
